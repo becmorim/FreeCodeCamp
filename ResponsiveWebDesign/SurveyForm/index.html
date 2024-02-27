@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Let us know how we can improve our service</p>
+    <form id="survey-form">
+     <fieldset>
+       <label id="name-label">Name: <input id="name" name="name" type="text" placeholder="Enter your full name" required /></label>
+       <label id="email-label">Email: <input id="email" name="email" type="email" placeholder="Enter your email" required /></label>
+       <label id="number-label">Age (optional): <input id="number" name="number" type="number" min="13" max="120" placeholder="How old are you?" /></label>
+     </fieldset>
+     <fieldset>
+        <legend>Account type (required)</legend>
+        <label for="personal-account"><input id="personal-account" value="personal-account" type="radio" name="account-type" class="inline" checked /> Personal</label>
+        <label for="business-account"><input id="business-account" value="business-account" type="radio" name="account-type" class="inline" /> Business</label>
+     </fieldset>
+     <fieldset>
+        <label for="dropdown">How did you hear about us?</label>
+          <select id="dropdown" name="dropdown">
+            <option value="">(select one)</option>
+            <option value="1">Social Media</option>
+            <option value="2">Ads</option>
+            <option value="3">Friends or family</option>
+            <option value="4">Other</option>
+          </select>
+     </fieldset>
+     <fieldset>
+                 <legend>What would you like to see improved?</legend>
+        <label class="container">User interface<input id="user" value="user" type="checkbox" name="improve" /><span class="checkmark"></span>
+        </label>
+        <label class="container">Customer service<input id="customer" value="customer" type="checkbox" name="improve" /><span class="checkmark"></span>
+        </label>
+        <label class="container">Community<input id="community" value="community" type="checkbox" name="improve" />   <span class="checkmark"></span>
+        </label>
+        <label class="container">Overall appearence<input id="appearence" value="appearence" type="checkbox" name="improve" />
+        <span class="checkmark"></span>
+        </label>
+         </fieldset>
+     <fieldset>
+      <label for="bio">Any comments or suggestions?:
+          <textarea id="suggestions" name="suggestions" rows="3" cols="30" placeholder="Enter your comment here..."></textarea>
+        </label>
+     </fieldset>
+     <input id="submit" type="submit" value="Submit" />
+     </form>
+</body>
+</html>
